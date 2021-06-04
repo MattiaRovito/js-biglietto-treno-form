@@ -10,8 +10,64 @@
     <title>Biglietto Treno</title>
 </head>
 <body>
+    <!-- Titolo -->
+    <h2>Calcola il prezzo del tuo biglietto</h2>
+    <!-- /Titolo -->
+
+
+    <!-- Section calcola-prezzo -->
+    <section class="calcola-prezzo">
+        <section class="flex">
+            <!-- nome-cognome -->
+            <div>
+           
+                <label for="nome-cognome">Nome Cognome</label>
+                <input type="text" id="nome-cognome">
+            
+            </div>
+            <!-- /nome-cognome -->
+
+            <!-- km -->
+            <div  class="m-4">
+                
+                <label for="km">Km da percorrere</label>
+                <input type="text" id="km">
+                
+            </div>
+            <!-- /km -->
+
+            <!-- fascia-eta -->
+            <div>
+            
+                <label for="fascia-eta">Fascia d'età</label>
+                <select id="fascia-eta">
+                    <Option value="minorenne">Minorenne</Option>
+                    <Option value="maggiorenne">Maggiorenne</Option>
+                    <Option value="over65">Over65</Option>
+                </select>
+            
+            </div>
+            <!-- /fascia-eta -->
+        </section>
+
+        <div class="btn">
+            <button class="genera">Genera</button>
+            <button class="annulla">Annulla</button>
+        </div>
+       
+        
+
+
+    </section>  
+    <!-- /Section calcola-prezzo -->
     
 
+
+    <!-- Section tuo-biglietto -->
+    <section class="tuo-biglietto">
+
+    </section>
+    <!-- /Section tuo-biglietto -->
 
 
 
