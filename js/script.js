@@ -34,7 +34,7 @@ genera.addEventListener('click', function(){
     document.getElementById('clickPasseggero').innerHTML = nome;
 
     // alert inserire il nome
-    if(nome == '' || nome == Number()){
+    if(nome == ''){
         alert('Si prega di inserire correttamente il nome');
     }
 
