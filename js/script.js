@@ -33,8 +33,20 @@ genera.addEventListener('click', function(){
     var nome = document.getElementById('nome').value;
     document.getElementById('clickPasseggero').innerHTML = nome;
 
+    // alert inserire il nome
+    if(nome == '' || nome == Number()){
+        alert('Si prega di inserire correttamente il nome');
+    }
+
     // valori dei km
     var km = document.getElementById('km').value;
+
+    // alert inserire il nome
+    if(km <= 0){
+        alert('Si prega di inserire correttamente il numero di km');
+    }
+
+
 
     // valori fascia d'età
     var eta = document.getElementById('fasciaEta').value;
@@ -54,6 +66,8 @@ genera.addEventListener('click', function(){
     }
     document.getElementById('offerta').innerHTML = scontistica;
     document.getElementById('costo').innerHTML = prezzoBiglietto + '€'; 
+
+
 
     // valori carrozza random
     var carrozza = Math.floor(Math.random() * 10) + 1;
