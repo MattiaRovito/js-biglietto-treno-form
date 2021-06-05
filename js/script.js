@@ -25,9 +25,16 @@
 var genera = document.getElementById('genera');
 
 genera.addEventListener('click', function(){
+    document.getElementById('hideShow').style.display = 'block';
     
     var nome = document.getElementById('nome').value;
     document.getElementById('clickPasseggero').innerHTML = nome;
+
+    var carrozza = Math.floor(Math.random() * 10) + 1;
+    document.getElementById('carrozza').innerHTML = carrozza;
+
+    var codCP = Math.floor(Math.random() * 10000) + 89999;
+    document.getElementById('codCP').innerHTML = codCP;
 });
 
 
@@ -48,7 +55,9 @@ genera.addEventListener('click', function(){
 var annulla = document.getElementById('annulla');
 
 annulla.addEventListener('click', function(){
-    
+    document.getElementById('hideShow').style.display = 'none';
+
+
     document.getElementById('nome').value = '';
     document.getElementById('km').value = '';
     document.getElementById('fasciaEta').value = '';
