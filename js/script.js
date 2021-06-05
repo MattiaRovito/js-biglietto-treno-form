@@ -30,6 +30,24 @@ genera.addEventListener('click', function(){
     var nome = document.getElementById('nome').value;
     document.getElementById('clickPasseggero').innerHTML = nome;
 
+    var km = document.getElementById('km').value;
+    var eta = document.getElementById('fasciaEta').value;
+    
+    var prezzoBiglietto = 0.21 * km;
+    var scontistica= '';
+
+    
+
+    if(eta < 18){
+        prezzoBiglietto = (prezzoBiglietto * 0.8).toFixed(2);
+        scontistica = 'Sconto minorenne';
+    } else if(eta > 65){
+        prezzoBiglietto = (prezzoBiglietto * 0.6).toFixed(2);
+        scontistica = 'Sconto Over65';
+    }
+    document.getElementById('offerta').innerHTML = scontistica;
+    document.getElementById('costo').innerHTML = prezzoBiglietto + '€'; 
+
     var carrozza = Math.floor(Math.random() * 10) + 1;
     document.getElementById('carrozza').innerHTML = carrozza;
 
