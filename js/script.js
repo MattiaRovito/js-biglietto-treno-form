@@ -15,3 +15,42 @@
 // Step 7 Al click su "Annulla" dobbiamo ripulire il form e far sparire la sezione che calcola il prezzo del biglietto.
 
 // Step 8 Bonus: aggiungete qualche controllo sui dati di input!
+
+
+
+
+
+// Genera
+
+var genera = document.getElementById('genera');
+
+genera.addEventListener('click', function(){
+    
+    var nome = document.getElementById('nome').value;
+    document.getElementById('clickPasseggero').innerHTML = nome;
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Annulla
+
+var annulla = document.getElementById('annulla');
+
+annulla.addEventListener('click', function(){
+    
+    document.getElementById('nome').value = '';
+    document.getElementById('km').value = '';
+    document.getElementById('fasciaEta').value = '';
+});
+
