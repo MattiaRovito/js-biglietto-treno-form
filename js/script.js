@@ -25,32 +25,43 @@
 var genera = document.getElementById('genera');
 
 genera.addEventListener('click', function(){
+    // hide & show del tuo biglietto
     document.getElementById('hideShow').style.display = 'block';
     
+
+    // valori del nome passeggero
     var nome = document.getElementById('nome').value;
     document.getElementById('clickPasseggero').innerHTML = nome;
 
+    // valori dei km
     var km = document.getElementById('km').value;
+
+    // valori fascia d'età
     var eta = document.getElementById('fasciaEta').value;
     
+
+    // calcolo prezzo del biglietto
     var prezzoBiglietto = 0.21 * km;
-    var scontistica= '';
+    var scontistica= 'Nessuno <br> Sconto';
 
     
-
     if(eta < 18){
         prezzoBiglietto = (prezzoBiglietto * 0.8).toFixed(2);
-        scontistica = 'Sconto minorenne';
+        scontistica = 'Sconto <br> Minorenne';
     } else if(eta > 65){
         prezzoBiglietto = (prezzoBiglietto * 0.6).toFixed(2);
-        scontistica = 'Sconto Over65';
+        scontistica = 'Sconto <br> Over 65';
     }
     document.getElementById('offerta').innerHTML = scontistica;
     document.getElementById('costo').innerHTML = prezzoBiglietto + '€'; 
 
+    // valori carrozza random
     var carrozza = Math.floor(Math.random() * 10) + 1;
     document.getElementById('carrozza').innerHTML = carrozza;
 
+
+
+    // valori codice CP random
     var codCP = Math.floor(Math.random() * 10000) + 89999;
     document.getElementById('codCP').innerHTML = codCP;
 });
