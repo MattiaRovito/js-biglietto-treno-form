@@ -27,6 +27,7 @@ var genera = document.getElementById('genera');
 genera.addEventListener('click', function(){
     // hide & show del tuo biglietto
     document.getElementById('hideShow').style.display = 'block';
+    // TODO lo style display è l'ultima spiaggia. Avresti dovuto mettere .className = la classe assegnata 
     
 
     // valori del nome passeggero
@@ -99,6 +100,7 @@ var annulla = document.getElementById('annulla');
 
 annulla.addEventListener('click', function(){
     document.getElementById('hideShow').style.display = 'none';
+     // TODO lo style display è l'ultima spiaggia. Avresti dovuto mettere .className = la classe assegnata
 
 
     document.getElementById('nome').value = '';
